@@ -3,10 +3,10 @@ spring:
     name: payment-ms
 
   kafka:
-    bootstrap-servers: localhost:9092
+    bootstrap-servers: ${SPRING_KAFKA_BOOTSTRAP_SERVERS:localhost:9092}
     consumer:
-      group-id: payment-ms-group-v2
+      group-id: ${SPRING_KAFKA_CONSUMER_GROUP_ID:payment-ms-group}
       auto-offset-reset: earliest
 
 server:
-  port: 8083
+  port: ${SERVER_PORT:8083}

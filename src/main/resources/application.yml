@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: payment-ms
+
+  kafka:
+    bootstrap-servers: localhost:9092
+    consumer:
+      group-id: payment-ms-group-v2
+      auto-offset-reset: earliest
+
+server:
+  port: 8083
